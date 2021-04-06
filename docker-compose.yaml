@@ -1,0 +1,82 @@
+version: '3.3'
+
+services:
+  postgres-compose:
+    restart: always
+    image: postgres
+    environment:
+      DATABASE_HOST: "127.0.0.1"
+      POSTGRES_USER: "leonardo"
+      POSTGRES_DB: "dockerkafka"  
+      POSTGRES_PASSWORD: "Postgres2021!"
+    ports:
+      - "5432:5432"
+    volumes: 
+      - ./sql/docker_postgres_init.sql:/docker-entrypoint-initdb.d/docker_postgres_init.sql
+    networks:
+      - postgres-compose-network
+      
+  pgadmin-compose:
+    restart: always
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "leonardo@dantas.com.br"
+      PGADMIN_DEFAULT_PASSWORD: "PgAdmin2021!"
+    ports:
+      - "16543:80"
+    depends_on:
+      - postgres-compose
+    networks:
+      - postgres-compose-network
+    
+  apiproducer:
+    depends_on: 
+      - postgres-compose
+      - kafka
+      - zookeeper
+    build: ./vendas/
+    ports:
+      - "8083:8083"
+    restart: always
+    networks: 
+      - postgres-compose-network
+  
+  apiconsumer:
+    depends_on: 
+      - postgres-compose
+      - kafka
+      - zookeeper
+    build: ./gerador/
+    ports:
+      - "8084:8084"
+    restart: always
+    networks: 
+      - postgres-compose-network
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    networks: 
+      - postgres-compose-network
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    networks: 
+      - postgres-compose-network
+    depends_on:
+      - zookeeper
+    ports:
+      - 9092:9092
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://kafka:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+networks: 
+  postgres-compose-network:
+    driver: bridge
