@@ -27,3 +27,24 @@
 - [x] Criação de um microsserviço consumidor.
 - [x] Criação de um serviço de mensageria.
 - [x] Gerenciamento do ambiente atraves do Docker Compose.
+
+### Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Docker](https://www.docker.com/) e [Docker](https://docs.docker.com/compose/install/). 
+Caso exita interesse em adicionar uma nova funcionalidade nos microserviços, então tambem será necessario alguma IDE como [IntelliJ](https://www.jetbrains.com/pt-br/idea/) ou [Eclipse](https://www.eclipse.org/downloads/packages/release/oxygen/3a/eclipse-ide-java-developers).
+
+### 🎲 Iniciando o ambiente a partir do arquivo Dockerfile.
+
+```bash
+# Clone este repositório
+$ git clone https://github.com/leonardodantas/spring-kafka-docker.git
+
+# Acesse a pasta do projeto e execute o seguinte comando 
+$ docker-compose up
+
+# Acesse a pasta do projeto e execute o seguinte comando 
+$ docker-compose up
+
+# O servidor inciará na porta:3333 - acesse <http://localhost:3333>
+```
