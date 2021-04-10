@@ -40,14 +40,29 @@ Caso exita interesse em adicionar uma nova funcionalidade nos microserviços, en
 # Clone este repositório
 $ git clone https://github.com/leonardodantas/spring-kafka-docker.git
 
-# Acesse a pasta do projeto e execute o seguinte comando 
+# Acesse a pasta do projeto e execute o seguinte comando em um terminal qualquer
 $ docker-compose up
 
 # Caso prefira executar o docker compose no modo detached 
 $ docker-compose up -d
 
-# As seguintes portas serão utilizadas para execução dos serviços:
+# Apos a execução de um dos comandos acima os serviços serão executados e as seguintes portas serão utilizadas:
 - Microsserviço produtor na porta: 8083
 - Microsserviço produtor na porta: 8084
 - PGAdmin: 16543
 ```
+### 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [PostgreSQL](https://www.postgresql.org/)
+- [Java](https://www.java.com/pt-BR/)
+- [SpringBoot](https://spring.io/projects/spring-boot)
+- [Kafka](https://kafka.apache.org/)
+- [Docker](https://www.docker.com/)
+
+### Autor
+Criado por Leonardo Rodrigues Dantas. Entre em contato!
+
+[![Linkedin Badge](https://img.shields.io/badge/-Thiago-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/tgmarinho/)](https://www.linkedin.com/in/tgmarinho/) 
+[![Gmail Badge](https://img.shields.io/badge/-tgmarinho@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:tgmarinho@gmail.com)](mailto:tgmarinho@gmail.com)
