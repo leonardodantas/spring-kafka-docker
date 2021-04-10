@@ -2,20 +2,6 @@
 
 <p align="center">Criação de um ambiente composto por dois Microserviços, Kafka e um Banco de dados PostgreSQL, tudo isso a parte de um arquivo Dockerfile</p>
 
-<!--ts-->
-   * [Sobre](#Sobre)
-   * [Tabela de Conteudo](#tabela-de-conteudo)
-   * [Instalação](#instalacao)
-   * [Como usar](#como-usar)
-      * [Pre Requisitos](#pre-requisitos)
-      * [Local files](#local-files)
-      * [Remote files](#remote-files)
-      * [Multiple files](#multiple-files)
-      * [Combo](#combo)
-   * [Tests](#testes)
-   * [Tecnologias](#tecnologias)
-<!--te-->
-
 <h4 align="center"> 
 	Projeto concluido.
 </h4>
