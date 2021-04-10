@@ -3,10 +3,10 @@
 <p align="center">Criação de um ambiente composto por dois Microserviços, Kafka e um Banco de dados PostgreSQL, tudo isso a parte de um arquivo Dockerfile</p>
 
 <h4 align="center"> 
-	Projeto concluido.
+	:closed_lock_with_key: Projeto concluido. :closed_lock_with_key:
 </h4>
 
-### Features
+### :pushpin: Features
 
 - [x] Criação de tabelas automatizadas por um arquivo sql.
 - [x] Criação de um microsserviço produtor.
@@ -14,7 +14,7 @@
 - [x] Criação de um serviço de mensageria.
 - [x] Gerenciamento do ambiente atraves do Docker Compose.
 
-### Pré-requisitos
+### :hammer: Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Docker](https://www.docker.com/) e [Docker](https://docs.docker.com/compose/install/). 
@@ -47,7 +47,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Kafka](https://kafka.apache.org/)
 - [Docker](https://www.docker.com/)
 
-### Autor
+### :sunglasses: Autor
 Criado por Leonardo Rodrigues Dantas. Entre em contato!
 
 [![Linkedin Badge](https://img.shields.io/badge/-Leonardo-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/leonardo-rodrigues-dantas/)](https://www.linkedin.com/in/leonardo-rodrigues-dantas/) 
