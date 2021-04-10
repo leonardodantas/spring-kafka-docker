@@ -43,8 +43,11 @@ $ git clone https://github.com/leonardodantas/spring-kafka-docker.git
 # Acesse a pasta do projeto e execute o seguinte comando 
 $ docker-compose up
 
-# Acesse a pasta do projeto e execute o seguinte comando 
-$ docker-compose up
+# Caso prefira executar o docker compose no modo detached 
+$ docker-compose up -d
 
-# O servidor inciará na porta:3333 - acesse <http://localhost:3333>
+# As seguintes portas serão utilizadas para execução dos serviços:
+- Microsserviço produtor na porta: 8083
+- Microsserviço produtor na porta: 8084
+- PGAdmin: 16543
 ```
