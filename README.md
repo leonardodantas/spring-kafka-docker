@@ -34,7 +34,7 @@ $ docker-compose up -d
 
 # Apos a execução de um dos comandos acima os serviços serão executados e as seguintes portas serão utilizadas:
 - Microsserviço produtor na porta: 8083
-- Microsserviço produtor na porta: 8084
+- Microsserviço consumidor na porta: 8084
 - PGAdmin: 16543
 ```
 ### 🛠 Tecnologias
